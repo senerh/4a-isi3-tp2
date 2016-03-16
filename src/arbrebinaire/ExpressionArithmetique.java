@@ -13,8 +13,9 @@ public class ExpressionArithmetique {
 
 	public void afficherPostFixe() {
 		System.out.println("\n postfixe:");
-		// TODO 
-		
+		VisiteurPostFixe visiteurPostFixe = new VisiteurPostFixe();
+		racine.accept(visiteurPostFixe);
+		System.out.println(visiteurPostFixe.getExpression());
 	}
 
 	public int calculerValeur() {

@@ -5,7 +5,8 @@ public class Addition extends OperateurBinaire{
 		super("+", ng, nd);
 	}
 
-
-	
+	public void accept(Visiteur visitor) {
+		visitor.visiterAddition(this);
+	}
 
 }

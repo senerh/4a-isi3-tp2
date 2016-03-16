@@ -22,11 +22,6 @@ public class TestArbreBinaire {
 		System.out.println("\n calcul valeur: " + exp.calculerValeur());
 		System.out.println("\n calcul hauteur: " + exp.calculerHauteur());
 		exp.afficherPostFixe();
-		
-		
-
 	}
-
-	
 
 }
