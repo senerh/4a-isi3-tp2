@@ -13,24 +13,28 @@ public class ExpressionArithmetique {
 
 	public void afficherPostFixe() {
 		System.out.println("\n postfixe:");
-		VisiteurPostFixe visiteurPostFixe = new VisiteurPostFixe();
+		VisiteurAffichePostFixe visiteurPostFixe = new VisiteurAffichePostFixe();
 		racine.accept(visiteurPostFixe);
 		System.out.println(visiteurPostFixe.getExpression());
 	}
 
 	public int calculerValeur() {
-		// TODO 
-		return 0;
+		VisiteurEvalExpression visiteurCalcul = new VisiteurEvalExpression();
+		racine.accept(visiteurCalcul); 
+		return visiteurCalcul.getEvaluation();
 	}
 
 	public int calculerHauteur() {
-		// TODO 
-		return 0;
+		VisiteurEvalHauteur visiteurEvalHauteur = new VisiteurEvalHauteur();
+		racine.accept(visiteurEvalHauteur);
+		return visiteurEvalHauteur.getHauteur();
 	}
+	
 	public void afficherInFixe() {
 		System.out.println("\n infixe:");
-		// TODO 
-		
+		VisiteurAfficheInFixe visiteurAfficheInfixe = new VisiteurAfficheInFixe();
+		racine.accept(visiteurAfficheInfixe);
+		System.out.println(visiteurAfficheInfixe.getExpression());
 	}
 	
 }
